@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+        h3{
+            text-align:center;
+            /* margin-top:20%; */
+            position: relative;
+            top:12em;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="division"> -->
+        <h3 id="heading">Automatic color changer</h3>
+    <!-- </div> -->
+    <script>
+    function getcolor() {
+        // Define your array of colors
+        let a = ["red", "blue", "green", "yellow", "purple","pink"];
+    
+        // Generate a random index within the array's length
+        let randomIndex = Math.floor(Math.random() * a.length);
+    
+        // Get the color at the random index
+        let selectedColor = a[randomIndex];
+    
+        // Set the background color of the body to the selected color
+        document.body.style.backgroundColor = selectedColor;
+    }
+    
+
+        setInterval(getcolor,1000)
+        // console.log(randomindex)
+        
+
+    </script>
+</body>
+</html>
